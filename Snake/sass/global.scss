@@ -1,0 +1,85 @@
+@import url("_components.scss");
+
+$font: 'Press Start 2P', cursive;
+
+* {
+    font-family: $font;
+}
+
+html{
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#board{
+    height: 300px;
+    width: 300px;
+}
+
+.boardInfo {
+    max-width: 600px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-top: 200px;
+}
+
+#start, .boardInfo {
+    font-size: 18px;
+    padding: 5px;
+}
+
+#gameOver {
+    width: 100%;
+    text-align: center;
+    display: none;
+    margin-top: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.boardInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#start {
+    background-color: #b80012;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+}
+
+#scoreTitle{
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
+
+#scoreBoard {
+    display: inline-flex;
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+.emptySquare {
+    background-color: #a51dff;
+}
+
+.snakeSquare {
+    background-color: #45f809;
+}
+
+.foodSquare {
+    background-color: #d03d03;
+}
